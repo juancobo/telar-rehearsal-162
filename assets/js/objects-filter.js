@@ -1,9 +1,9 @@
-/* GENERATED FILE - do not edit. Bundled from assets/js/objects-filter/ by esbuild. Rebuild: npm run build:js (see assets/js/README.md). @version v1.8.0 */
+/* GENERATED FILE - do not edit. Bundled from assets/js/objects-filter/ by esbuild. Rebuild: npm run build:js (see assets/js/README.md). */
 (() => {
   // assets/js/objects-filter/escape.js
   function escapeHtml(text, doc = document) {
     const div = doc.createElement("div");
-    div.textContent = text == null ? "" : String(text);
+    div.textContent = text;
     return div.innerHTML.replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
 
@@ -102,9 +102,7 @@
     }
     function cacheElements() {
       elements = {
-        layout: doc.querySelector(".objects-layout"),
         grid: doc.querySelector(".collection-grid"),
-        noResults: doc.getElementById("objects-no-results"),
         items: doc.querySelectorAll(".collection-item"),
         visibleCount: doc.getElementById("objects-visible-count"),
         searchInput: doc.getElementById("objects-search-input"),
@@ -132,10 +130,7 @@
         optionsContainer.innerHTML = "";
         const entries = Object.entries(facets);
         if (entries.length === 0) {
-          const empty = doc.createElement("span");
-          empty.className = "objects-filter-empty";
-          empty.textContent = elements.layout.dataset.noOptions;
-          optionsContainer.replaceChildren(empty);
+          optionsContainer.innerHTML = '<span class="objects-filter-empty">No options available</span>';
           return;
         }
         entries.forEach(([value, count]) => {
@@ -293,9 +288,6 @@
       }
       if (elements.visibleCount) {
         elements.visibleCount.textContent = count;
-      }
-      if (elements.noResults) {
-        elements.noResults.hidden = count !== 0;
       }
     }
     function updateActiveFiltersUI() {
