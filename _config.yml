@@ -3,7 +3,14 @@
 
 # Site Settings
 title: "Telar"
-description: "Telar (Spanish for 'loom') is a static site generator built on Jekyll that weaves together IIIF images, text, and layered contextual information into interactive digital narrative exhibitions. <a href='https://github.com/UCSB-AMPLab/telar'>Telar</a> is a project of <a href='https://neogranadina.org'>Neogranadina</a>, the <a href='https://ampl.clair.ucsb.edu/'>UCSB Archives, Memory, and Preservation Lab</a>, and the <a href='https://liberalarts.utexas.edu/history/'>UT Archives, Mapping, and Pedagogy Lab</a>."
+description: Telar (Spanish for 'loom') is a static site generator built on Jekyll that
+  weaves together IIIF images, text, and layered contextual information into
+  interactive digital narrative exhibitions. <a
+  href='https://github.com/UCSB-AMPLab/telar'>Telar</a> is a project of <a
+  href='https://neogranadina.org'>Neogranadina</a>, the <a
+  href='https://ampl.clair.ucsb.edu/'>UCSB Archives, Memory, and Preservation
+  Lab</a>, and the <a href='https://liberalarts.utexas.edu/history/'>UT
+  Archives, Mapping, and Pedagogy Lab</a>.
 url: "https://ampl.clair.ucsb.edu"
 baseurl: "/telar"
 author: ""
@@ -14,11 +21,7 @@ telar_language: "en" # Options: "en" (English), "es" (Español)
 collection_mode: false # Set to true to show objects first with large thumbnails and stories below with small thumbnails (collection-first homepage)
 
 # Story Interface Settings
-story_interface:
-  show_on_homepage: true # Set to false to hide stories section from homepage (stories still accessible via direct URL)
-  show_story_steps: true # Set to false to hide "Step X" overlay in stories
-  show_object_credits: true # Set to true to display object credits badge (bottom-left corner, dismissable)
-  include_demo_content: true # Fetch demo stories from content.telar.org. Switch this off to hide demo stories and their content.
+story_interface: {show_on_homepage: true, show_story_steps: true, show_object_credits: true, include_demo_content: true}
 
 # Collection Interface Settings
 collection_interface:
