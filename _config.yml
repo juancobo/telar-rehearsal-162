@@ -14,11 +14,7 @@ telar_language: en
 collection_mode: false
 
 # Story Interface Settings
-story_interface:
-  show_on_homepage: true
-  show_story_steps: true
-  show_object_credits: true
-  include_demo_content: true
+story_interface: {show_on_homepage: true, show_story_steps: true, show_object_credits: true, include_demo_content: true}
 
 # Collection Interface Settings
 collection_interface:
